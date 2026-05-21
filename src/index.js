@@ -1,3 +1,4 @@
+import { getWeather } from './api.js';
 import './styles.css';
 
-console.log('success')
+console.log(getWeather('sanaa'));
