@@ -6,6 +6,14 @@ function main() {
   const locationinput = document.querySelector('input');
   const submitButton = document.querySelector('button');
 
+  const displayContainer = document.querySelector('.container');
+  const displayDiv = document.querySelector('.display');
+  const addressDiv = document.querySelector('.address');
+  const tempDiv = document.querySelector('.temp');
+  const iconDiv = document.querySelector('.icon');
+  const conditionDiv = document.querySelector('.condition');
+  const descriptionDiv = document.querySelector('.description');
+
   submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     if (!locationinput.value) {
@@ -27,10 +35,15 @@ function main() {
     console.log(data);
     console.log('==================================');
     console.log(data.address);
+    addressDiv.textContent = data.address;
     console.log('condition: ' + data.currentConditions.conditions);
+    conditionDiv.textContent = data.currentConditions.conditions;
     console.log('icon: ' + data.currentConditions.icon);
+    iconDiv.textContent = data.currentConditions.icon;
     console.log(data.currentConditions.temp);
+    tempDiv.textContent = data.currentConditions.temp;
     console.log(data.description);
+    descriptionDiv.textContent = data.description;
   });
 }
 
