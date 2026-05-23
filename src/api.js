@@ -4,7 +4,7 @@ export const getWeather = async (location) => {
     let response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=${key}&contentType=json`
     );
-    let json = response.json();
+    let json = await response.json();
     return json;
   } catch (error) {
     console.log(error);
