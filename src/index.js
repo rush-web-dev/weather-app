@@ -1,4 +1,5 @@
 import { getWeather } from './api.js';
+import { loadIcon } from './loadIcon.js';
 import './styles.css';
 
 function main() {
@@ -39,7 +40,9 @@ function main() {
     console.log('condition: ' + data.currentConditions.conditions);
     conditionDiv.textContent = data.currentConditions.conditions;
     console.log('icon: ' + data.currentConditions.icon);
-    iconDiv.textContent = data.currentConditions.icon;
+    loadIcon(data.currentConditions.icon).then((icon) => {
+      iconDiv.innerHTML = icon;
+    });
     console.log(data.currentConditions.temp);
     tempDiv.textContent = data.currentConditions.temp;
     console.log(data.description);
