@@ -45,12 +45,12 @@ function main() {
     console.log('icon: ' + data.currentConditions.icon);
     loadIcon(data.currentConditions.icon).then((icon) => {
       iconDiv.innerHTML = icon;
+      loading.classList.add('hidden');
     });
     console.log(data.currentConditions.temp);
     tempDiv.textContent = data.currentConditions.temp;
     console.log(data.description);
     descriptionDiv.textContent = data.description;
-    loading.classList.add('hidden');
   });
 }
 
