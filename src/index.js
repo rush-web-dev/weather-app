@@ -3,12 +3,9 @@ import { loadIcon } from './loadIcon.js';
 import './styles.css';
 
 function main() {
-  const locationform = document.querySelector('form');
   const locationinput = document.querySelector('input');
   const submitButton = document.querySelector('button');
 
-  const displayContainer = document.querySelector('.container');
-  const displayDiv = document.querySelector('.display');
   const addressDiv = document.querySelector('.address');
   const tempDiv = document.querySelector('.temp');
   const iconDiv = document.querySelector('.icon');
