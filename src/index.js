@@ -15,11 +15,14 @@ function main() {
   const conditionDiv = document.querySelector('.condition');
   const descriptionDiv = document.querySelector('.description');
 
+  const loading = document.querySelector('.loading-container');
+
   submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     if (!locationinput.value) {
       return;
     }
+    loading.classList.remove('hidden');
     let value = locationinput.value;
     locationinput.value = '';
     console.log(value);
@@ -47,6 +50,7 @@ function main() {
     tempDiv.textContent = data.currentConditions.temp;
     console.log(data.description);
     descriptionDiv.textContent = data.description;
+    loading.classList.add('hidden');
   });
 }
 

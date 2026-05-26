@@ -73,3 +73,26 @@ svg {
   height: 100px;
   width: 100px;
 }
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.loading {
+  font-size: 64px;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
