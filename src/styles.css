@@ -96,3 +96,57 @@ svg {
 .hidden {
   display: none;
 }
+
+.body,
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  background-color: lightblue;
+  padding: 50px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'temp icon'
+    'temp condition'
+    'description description';
+  grid-template-columns: 1fr 1fr;
+}
+
+.address {
+  justify-self: start;
+  align-self: center;
+  grid-area: title;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.temp {
+  justify-self: start;
+  align-self: center;
+  grid-area: temp;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.icon {
+  justify-self: start;
+  align-self: center;
+  grid-area: icon;
+}
+
+.condition {
+  justify-self: start;
+  align-self: center;
+  grid-area: condition;
+}
+
+.description {
+  justify-self: start;
+  align-self: center;
+  grid-area: description;
+}
